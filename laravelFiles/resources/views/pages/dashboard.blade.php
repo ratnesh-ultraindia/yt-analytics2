@@ -143,7 +143,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <p class="metric-title">Revenue</p>
-                                        <h5 class="metric-figure">₹${revenue.toFixed(2)}</h5>
+                                        <h5 class="metric-figure">$ ${revenue.toFixed(2)}</h5>
                                     </div>
                                     <div class="col-md-12">
                                         <h5>Revenue Over Time</h5>

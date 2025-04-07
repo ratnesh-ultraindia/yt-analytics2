@@ -20,7 +20,27 @@ class PageLoader extends Controller
         echo view("footer",$data);
     }
 
+    function auth()  {
+
+        
+
+        if(session("authenticated")){
+            return redirect()->to(url("dashboard"));
+        }
+        
+
+        $this->page_loader("auth",[
+            "title"=>"YT Software Auth"
+        ]);
+
+    }
+
     function home()  {
+
+
+        if(!session("authenticated")){
+            return redirect()->to(url("/"));
+        }
         
         $groups = Group::all();
 
